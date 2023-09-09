@@ -5,9 +5,6 @@
         <div class="header__logo">
           <router-link to="/">
             <!-- <img src="@/assets/header/main_logo.svg" /> -->
-            <div class="main-logo">
-               <h5 class="elegant-logo1">Elegant</h5>
-               <h5 class="elegant-logo2">shoes</h5>
             <div>
               <div class="header__logo--elegant">Elegant</div>
               <div class="header__logo--shoes">shoes</div>
@@ -23,7 +20,7 @@
 
           <div class="header__right--phone">
             <div><img src="../../assets/header/call.png"></div>
-            <div>+998 99 99 99 99</div>
+            <div style="margin-left:5px">+998 99 99 99 99</div>
           </div>
           <div></div>
         </div>
