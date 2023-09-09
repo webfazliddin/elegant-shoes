@@ -4,7 +4,11 @@
       <div class="header__wrapper">
         <div class="header__logo">
           <router-link to="/">
-            <img src="@/assets/header/main_logo.svg" />
+            <!-- <img src="@/assets/header/main_logo.svg" /> -->
+            <div class="main-logo">
+               <h5 class="elegant-logo1">Elegant</h5>
+               <h5 class="elegant-logo2">shoes</h5>
+            </div>
           </router-link>
         </div>
 
@@ -48,6 +52,18 @@ export default {
 };
 </script>
 <style lang="scss">
+.main-logo{
+  font-size: 24px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing:  1.3px;
+  // text-transform: uppercase;
+}
+.elegant-logo1{
+  color: #000;
+  }
+.elegant-logo2{
+  color: #4E60FF;
+}
 .header {
   position: sticky;
   top: 0;
