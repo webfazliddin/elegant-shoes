@@ -8,6 +8,9 @@
             <div class="main-logo">
                <h5 class="elegant-logo1">Elegant</h5>
                <h5 class="elegant-logo2">shoes</h5>
+            <div>
+              <div class="header__logo--elegant">Elegant</div>
+              <div class="header__logo--shoes">shoes</div>
             </div>
           </router-link>
         </div>
@@ -19,7 +22,7 @@
           </div>
 
           <div class="header__right--phone">
-            <div><img src="../../assets/header/phone.png"></div>
+            <div><img src="../../assets/header/call.png"></div>
             <div>+998 99 99 99 99</div>
           </div>
           <div></div>
@@ -78,6 +81,7 @@ export default {
   transition: box-shadow 0.25s ease-in-out;
 
   &__wrapper {
+    font-family: $base-font;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -86,9 +90,16 @@ export default {
   &__logo {
     display: flex;
     align-items: center;
+    font-family: $base-font;
+    font-size: 19px;
+    letter-spacing: 1.5px;
+    &--elegant {
+      
+      color: $color-dark;
+    }
 
-    img {
-      cursor: pointer;
+    &--shoes {
+      color: $color-primary;
     }
   }
 
@@ -96,17 +107,22 @@ export default {
   display: flex;
   align-items: center;
   font-family: $base-font;
-  // color: $color-primary;
 
 
   &--place {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 30px;
+    cursor: pointer;
   }
   &--phone {
     display: flex;
     align-items: center;
+    cursor: pointer;
+  }
+  img{
+    width: 20px;
+    height: 20px;
   }
  }
 }
