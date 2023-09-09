@@ -14,13 +14,13 @@
 
         <div class="header__right">
           <div class="header__right--place">
-            <div><img src="../../assets/header/place.png"></div>
+            <div><img src="../../assets/header/location.png"></div>
             <div>Andijon</div>
           </div>
 
           <div class="header__right--phone">
-            <div><img src="../../assets/header/call.png"></div>
-            <div style="margin-left:5px">+998 99 99 99 99</div>
+            <div><img src="../../assets/header/contact.png"></div>
+            <div class="phone-number">+998 99 99 99 99</div>
           </div>
           <div></div>
         </div>
@@ -52,17 +52,9 @@ export default {
 };
 </script>
 <style lang="scss">
-.main-logo{
-  font-size: 24px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  letter-spacing:  1.3px;
-  // text-transform: uppercase;
-}
-.elegant-logo1{
-  color: #000;
-  }
-.elegant-logo2{
-  color: #4E60FF;
+.phone-number{
+margin: -3px 0 0 5px;
+// font-family: Georgia;
 }
 .header {
   position: sticky;

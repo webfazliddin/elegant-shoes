@@ -35,6 +35,7 @@ export default {
 <style lang="scss">
 .card {
   border-radius: 5px;
+  width: 92%;
   border: 1px solid $color-secondary-light;
 
   &__image img {
@@ -87,7 +88,7 @@ export default {
 
   &__p1 {
       color: red;
-      margin-right: 12px;
+      margin-right: 12px; 
     }
 
     &__p2 {
