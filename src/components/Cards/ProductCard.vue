@@ -6,18 +6,30 @@
     <div class="card__body">
       <div>
         <div class="card__title">{{ title }}</div>
-        <div><img src="../../assets/product/eye.png" alt=""></div>
+        <div @click="openModal"><img src="../../assets/product/eye.png" alt=""></div>
       </div>
       <div class="card__text">
         <p class="card__p1">149ming</p>
         <p class="card__p2">250ming</p>
       </div>
     </div>
+         <!-- <b-modal
+            size="lg"
+            v-model="ProductModal"
+            no-close-on-backdrop
+            hide-footer
+          >
+          <p>hello world</p>
+          </b-modal> -->
   </div>
 </template>
 
 <script>
+import { BModal } from "bootstrap-vue";
 export default {
+   components: {
+    BModal,
+  },
   name: "ProductCard",
   props: {
     image: {
@@ -29,6 +41,16 @@ export default {
       default: "",
     },
   },
+  data() {
+    return {
+      ProductModal: false,
+     }
+   },
+    methods:{
+    openModal() {
+      this.ProductModal = true;
+       }
+    }
 };
 </script>
 

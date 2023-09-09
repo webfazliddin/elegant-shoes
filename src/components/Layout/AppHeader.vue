@@ -4,10 +4,14 @@
       <div class="header__wrapper">
         <div class="header__logo">
           <router-link to="/">
-            <!-- <img src="@/assets/header/main_logo.svg" /> -->
+            <div style="display:flex; gap:15px"> 
+              <div>
+               <img style="width:40px" src="@/assets/header/elegant-logo.jpg" />
+            </div>
             <div>
               <div class="header__logo--elegant">Elegant</div>
               <div class="header__logo--shoes">shoes</div>
+            </div>
             </div>
           </router-link>
         </div>
