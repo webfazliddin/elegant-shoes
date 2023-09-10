@@ -21,11 +21,9 @@
             <div><img src="../../assets/header/location.png"></div>
             <div>Andijon</div>
           </div>
-
           <div class="header__right--phone">
             <div><img src="../../assets/header/contact.png"></div>
             <div class="phone-number">+998-97-346-26-36</div>
-
           </div>
           <div></div>
         </div>
