@@ -1,80 +1,40 @@
 <template>
-  <!-- <div>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="4000"
-      controls
-      indicators
-      background="#ababab"
-      img-width="1024"
-      img-height="480"
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
-      <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/1024/480/?image=52"
-      ></b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-      <b-carousel-slide>
-        <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
-      </b-carousel-slide>
-    </b-carousel>
-
-    <p class="mt-4">
-      Slide #: {{ slide }}<br>
-      Sliding: {{ sliding }}
-    </p>
-  </div> -->
-  <div class="card">
-    <div class="card__image">
-      <img src="../../assets/product/shoesel.webp">
+  <div>
+    <div>
+      
     </div>
-    <div class="card__body">
-      <div>
-        <div class="card__title">{{ title }}</div>
-        <div @click="openModal"><img src="../../assets/product/eye.png" alt=""></div>
+    <div class="card">
+      <div class="card__image">
+        <img src="../../assets/product/shoesel.webp" />
       </div>
-      <div class="card__text">
-        <p class="card__p1">149ming</p>
-        <p class="card__p2">250ming</p>
+      <div class="card__body">
+        <div>
+          <div class="card__title">{{ title }}</div>
+          <div @click="openModal">
+            <img src="../../assets/product/eye.png" alt />
+          </div>
+        </div>
+        <div class="card__text">
+          <p class="card__p1">149ming</p>
+          <p class="card__p2">250ming</p>
+        </div>
       </div>
-    </div>
-         <!-- <b-modal
+      <!-- <b-modal
             size="lg"
             v-model="ProductModal"
             no-close-on-backdrop
             hide-footer
           >
           <p>hello world</p>
-          </b-modal> -->
+      </b-modal>-->
+    </div>
   </div>
 </template>
 
 <script>
 import { BModal, BCarousel } from "bootstrap-vue";
 export default {
-   components: {
+  components: {
     BModal,
     BCarousel
   },
@@ -82,31 +42,32 @@ export default {
   props: {
     image: {
       type: String,
-      default: 'https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png'
+      default:
+        "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png"
     },
     title: {
       type: String,
-      default: "",
-    },
+      default: ""
+    }
   },
   data() {
     return {
       ProductModal: false,
       slide: 0,
-        sliding: null
-     }
-   },
-    methods:{
+      sliding: null
+    };
+  },
+  methods: {
     openModal() {
       this.ProductModal = true;
-       },
-         onSlideStart(slide) {
-        this.sliding = true
-      },
-      onSlideEnd(slide) {
-        this.sliding = false
-      }
+    },
+    onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd(slide) {
+      this.sliding = false;
     }
+  }
 };
 </script>
 
@@ -124,7 +85,6 @@ export default {
     cursor: pointer;
   }
 
-
   &__body {
     padding: 16px;
 
@@ -136,7 +96,7 @@ export default {
         display: flex;
         justify-content: space-between;
 
-        img{
+        img {
           width: 35px;
           cursor: pointer;
         }
@@ -160,19 +120,17 @@ export default {
       font-size: 13px;
       line-height: 16px;
     }
-
-   
   }
 
   &__p1 {
-      color: red;
-      margin-right: 12px; 
-    }
+    color: red;
+    margin-right: 12px;
+  }
 
-    &__p2 {
-      color: $color-dark;
-      font-weight: bold;
-      text-decoration: line-through;
-    }
+  &__p2 {
+    color: $color-dark;
+    font-weight: bold;
+    text-decoration: line-through;
+  }
 }
 </style>

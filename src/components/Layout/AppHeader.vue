@@ -6,7 +6,7 @@
           <router-link to="/">
             <div style="display:flex; gap:15px"> 
               <div>
-               <img style="width:40px" src="@/assets/header/TF.png" />
+               <img style="width:40px" src="@/assets/header/TF.jpg" />
             </div>
             <div>
               <div class="header__logo--elegant">Elegant</div>
@@ -24,7 +24,8 @@
 
           <div class="header__right--phone">
             <div><img src="../../assets/header/contact.png"></div>
-            <div class="phone-number">+998 99 99 99 99</div>
+            <div class="phone-number">+998-97-346-26-36</div>
+
           </div>
           <div></div>
         </div>
@@ -58,7 +59,7 @@ export default {
 <style lang="scss">
 .phone-number{
 margin: -3px 0 0 5px;
-// font-family: Georgia;
+// font-family: Georgia; 
 }
 .header {
   position: sticky;
