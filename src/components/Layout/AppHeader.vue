@@ -3,8 +3,8 @@
     <div class="container">
       <div class="header__wrapper">
         <div class="header__logo">
-          <router-link to="/">
-            <div style="display:flex; gap:15px"> 
+          <router-link  link to="/">
+            <div style="display:flex; gap:15px">
               <div>
                <img style="width:40px" src="@/assets/header/TF.jpg" />
             </div>
@@ -15,7 +15,6 @@
             </div>
           </router-link>
         </div>
-
         <div class="header__right">
           <div class="header__right--place">
             <div><img src="../../assets/header/location.png"></div>
@@ -25,7 +24,6 @@
             <div><img src="../../assets/header/contact.png"></div>
             <div class="phone-number">+998-97-346-26-36</div>
           </div>
-          <div></div>
         </div>
       </div>
     </div>

@@ -42,8 +42,8 @@ export default {
   props: {
     image: {
       type: String,
-      default:
-        "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png"
+      // default:
+      //   "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png"
     },
     title: {
       type: String,
@@ -117,7 +117,7 @@ export default {
 
     p {
       font-family: $base-font;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 16px;
     }
   }
@@ -128,7 +128,7 @@ export default {
   }
 
   &__p2 {
-    color: $color-dark;
+    color: $color-grey;
     font-weight: bold;
     text-decoration: line-through;
   }
