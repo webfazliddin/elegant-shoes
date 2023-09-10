@@ -6,7 +6,7 @@
           <router-link to="/">
             <div style="display:flex; gap:15px"> 
               <div>
-               <img style="width:40px" src="@/assets/header/elegant-logo.jpg" />
+               <img style="width:40px" src="@/assets/header/TF.png" />
             </div>
             <div>
               <div class="header__logo--elegant">Elegant</div>
