@@ -3,7 +3,7 @@
     <div class="container">
        <div class="content">
         <div>
-          <img style="width:100px" src="@/assets/header/TF.jpg" />
+          <img style="width:100px" src="@/assets/header/TF.png" />
       </div>
     <div>
       <h2>Biz haqimizda</h2>
