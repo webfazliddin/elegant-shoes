@@ -2,6 +2,8 @@
   <div>
     <AppHeader />
 
+    <AppCarousel />
+
     <router-view></router-view>
 
     <AppFooter />
@@ -13,6 +15,7 @@
 
 import AppHeader from "../components/Layout/AppHeader.vue";
 import AppFooter from "../components/Layout/AppFooter.vue";
+import AppCarousel from "../components/Layout/AppCarousel.vue";
 
 export default {
   
@@ -20,6 +23,7 @@ export default {
   components: {
     AppHeader,
     AppFooter,
+    AppCarousel,
   },
 };
 </script>
