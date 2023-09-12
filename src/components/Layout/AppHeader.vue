@@ -2,27 +2,28 @@
   <header :class="scrolled ? 'scroll' : ''" class="header">
     <div class="container">
       <div class="header__wrapper">
-        <div class="header__logo">
-          <router-link  link to="/">
-            <div style="display:flex; gap:15px">
-              <div>
-               <img style="width:40px" src="@/assets/header/TF.png" />
-            </div>
+        <router-link style="text-decoration: none" link to="/">
+          <div class="header__logo">
             <div>
+              <img style="width: 40px" src="@/assets/header/TF.png" />
+            </div>
+
+            <div style="line-height: 20px;">
               <div class="header__logo--elegant">Elegant</div>
               <div class="header__logo--shoes">shoes</div>
             </div>
-            </div>
-          </router-link>
-        </div>
+          </div>
+        </router-link>
+
         <div class="header__right">
           <div class="header__right--place">
-            <div><img src="../../assets/header/location.png"></div>
+            <div><img src="../../assets/header/location.png" /></div>
             <div>Andijon</div>
           </div>
+
           <div class="header__right--phone">
-            <div><img src="../../assets/header/contact.png"></div>
-            <div class="phone-number">+998-97-346-26-36</div>
+            <div><img src="../../assets/header/contact.png" /></div>
+            <div>+998-97-346-26-36</div>
           </div>
         </div>
       </div>
@@ -53,10 +54,6 @@ export default {
 };
 </script>
 <style lang="scss">
-.phone-number{
-margin: -3px 0 0 5px;
-// font-family: Georgia; 
-}
 .header {
   position: sticky;
   top: 0;
@@ -80,11 +77,12 @@ margin: -3px 0 0 5px;
   &__logo {
     display: flex;
     align-items: center;
+    gap: 15px;
     font-family: $base-font;
     font-size: 19px;
     letter-spacing: 1.5px;
+
     &--elegant {
-      
       color: $color-dark;
     }
 
@@ -93,52 +91,60 @@ margin: -3px 0 0 5px;
     }
   }
 
- &__right{
-  display: flex;
-  align-items: center;
-  font-family: $base-font;
-
-
-  &--place {
+  &__right {
     display: flex;
     align-items: center;
-    margin-right: 30px;
-    cursor: pointer;
+    font-family: $base-font;
+
+    &--place {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      cursor: pointer;
+
+      & > div > img {
+        margin-right: 6px;
+      }
+    }
+    &--phone {
+      display: flex;
+      align-items: center;
+      margin: -3px 0 0 5px;
+      cursor: pointer;
+
+      & > div > img {
+        margin-right: 6px;
+      }
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
-  &--phone {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  img{
-    width: 20px;
-    height: 20px;
-  }
- }
 }
 .scroll {
   box-shadow: 0 0 10px rgba(168, 168, 168, 0.4);
 }
 
 // =========Mobile breakpoint==========
-@media screen and (max-width: 768px) {
-  .header {
-    &__menu {
-      position: relative;
-      justify-content: end;
+// @media screen and (max-width: 768px) {
+//   .header {
+//     &__menu {
+//       position: relative;
+//       justify-content: end;
 
-      &-link {
-        display: none;
-      }
+//       &-link {
+//         display: none;
+//       }
 
-      &-card {
-        border: 2px solid $color-primary-light;
+//       &-card {
+//         border: 2px solid $color-primary-light;
 
-        &:hover {
-          border: 2px solid $color-primary;
-        }
-      }
-    }
-  }
-}
+//         &:hover {
+//           border: 2px solid $color-primary;
+//         }
+//       }
+//     }
+//   }
+// }
 </style>

@@ -9,55 +9,68 @@
         />
       </div>
 
-      <div class="products__list" v-if="!isLoading">
+      <div class="products__list" v-if="!isLoading" @click="callModal">
         <ProductCard
-          v-for="(product) in productList"
+          v-for="product in productList"
           :key="`productCard__${product.id}`"
           :image="product.image"
           :title="product.name"
         />
       </div>
+
+      <DialogCard v-if="isShowModal" :title="'Title'" @close="close">
+          <template #body> Modal Body </template>
+          <template #footer>
+            <button>Cancel</button>
+            <button>Send</button>
+          </template>
+        </DialogCard>
     </div>
   </section>
 </template>
 
 <script>
-
-import client from "../api"
+import client from "../api";
+import DialogCard from "@/components/Cards/DialogCard.vue";
 
 export default {
   name: "IndexPage",
   data() {
     return {
       isLoading: false,
+      isShowModal: false,
       productList: [],
     };
   },
+  components: {
+    DialogCard
+  },
   methods: {
-    loadData(){
-      this.isLoading = true
+    loadData() {
+      this.isLoading = true;
 
-      const promise1 = client.get('/api/products')
-      .then((response) => {
+      const promise1 = client.get("/api/products").then((response) => {
         this.productList = response.data.data;
-      })
+      });
 
-     
-
-      Promise.all([promise1])
-      .finally(() => {
-        this.isLoading = false
-      })
+      Promise.all([promise1]).finally(() => {
+        this.isLoading = false;
+      });
+    },
+    close() {
+      this.isShowModal = false;
+    },
+    callModal() {
+      this.isShowModal = true;
     },
   },
-  mounted(){
+  mounted() {
     this.loadData();
-  }
+  },
 };
 </script>
 
 <style lang="scss">
-
 .products {
   &__list {
     display: grid;
@@ -67,8 +80,7 @@ export default {
   }
 }
 
-@media screen and ( max-width: 768px) {
-
+@media screen and (max-width: 768px) {
   .products {
     &__list {
       grid-template-columns: 1fr;
