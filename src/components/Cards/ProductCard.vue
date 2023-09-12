@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-      
-    </div>
+    <div></div>
     <div class="card">
       <div class="card__image">
         <img src="../../assets/product/shoesel.webp" />
@@ -26,17 +24,17 @@
             hide-footer
           >
           <p>hello world</p>
-      </b-modal>-->
+      </b-modal> -->
     </div>
   </div>
 </template>
 
 <script>
-import { BModal, BCarousel } from "bootstrap-vue";
+// import { BModal, BCarousel } from "bootstrap-vue";
 export default {
   components: {
-    BModal,
-    BCarousel
+    // BModal,
+    // BCarousel,
   },
   name: "ProductCard",
   props: {
@@ -47,27 +45,27 @@ export default {
     },
     title: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   data() {
     return {
       ProductModal: false,
       slide: 0,
-      sliding: null
+      sliding: null,
     };
   },
-  methods: {
-    openModal() {
-      this.ProductModal = true;
-    },
-    onSlideStart(slide) {
-      this.sliding = true;
-    },
-    onSlideEnd(slide) {
-      this.sliding = false;
-    }
-  }
+  // methods: {
+  //   openModal() {
+  //     this.ProductModal = true;
+  //   },
+  //   onSlideStart(slide) {
+  //     this.sliding = true;
+  //   },
+  //   onSlideEnd(slide) {
+  //     this.sliding = false;
+  //   },
+  // },
 };
 </script>
 
