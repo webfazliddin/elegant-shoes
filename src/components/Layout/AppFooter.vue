@@ -6,24 +6,23 @@
           <img style="width: 100px" src="@/assets/header/TF.png" />
         </div>
         <div>
-          <h3>Biz haqimizda</h3>
+          <h6>Biz haqimizda</h6>
           <p>Chegirmalar</p>
           <p>Yangiliklar</p>
           <p>Katalog</p>
         </div>
         <div>
-          <h3>Asosiy</h3>
+          <h6>Asosiy</h6>
           <p>Bosh sahifa</p>
           <p>Chegirmalar</p>
           <p>Yangiliklar</p>
           <p>Katalog</p>
         </div>
         <div>
-          <h3>Kontakt</h3>
+          <h6>Kontakt</h6>
           <p>+9989-90-7072-11</p>
           <p>info@elegant_shoes.uz</p>
         </div>
-        <div></div>
       </div>
     </div>
   </footer>
@@ -41,29 +40,28 @@ export default {
 <style lang="scss">
 footer {
   background-color: $color-dark;
-  padding: 90px 0;
+  padding: 40px 0 90px;
 }
 
 .content {
   display: flex;
-  align-items: center;
   gap: 300px;
   font-family: $base-font;
   color: $color-grey-light;
-}
-
-.content h3 {
-  margin-bottom: 20px;
 }
 
 .content img {
   cursor: pointer;
 }
 
+.content h6 {
+  margin-bottom: 12px;
+}
+
 .content p {
   color: $color-grey;
   letter-spacing: 0.4px;
-  margin-top: 8px;
+  line-height: 10px;
   position: relative;
   cursor: pointer;
 }
