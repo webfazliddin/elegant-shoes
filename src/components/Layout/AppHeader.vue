@@ -1,5 +1,5 @@
 <template>
-  <header :class="scrolled ? 'scroll' : ''" class="header">
+  <header :class="scrolled ? 'scroll' : ''" class="header" style="z-index:1000">
     <div class="container">
       <div class="header__wrapper">
         <router-link style="text-decoration: none" link to="/">
