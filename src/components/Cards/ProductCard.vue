@@ -7,7 +7,7 @@
       </div>
       <div class="card__body">
         <div>
-          <div class="card__title">{{ title }}</div>
+          <div class="card__title">Loro Piano</div>
           <div>
             <img src="../../assets/product/eye.png" alt />
           </div>
@@ -72,8 +72,6 @@ export default {
 <style lang="scss">
 .card {
   border-radius: 5px;
-  width: 92%;
-  border: 1px solid $color-secondary-light;
 
   &__image img {
     width: 100%;

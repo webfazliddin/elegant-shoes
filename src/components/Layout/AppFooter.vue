@@ -5,26 +5,76 @@
         <div>
           <img style="width: 100px" src="@/assets/header/TF.png" />
         </div>
+
         <div>
           <h6>Biz haqimizda</h6>
-          <p>Chegirmalar</p>
-          <p>Yangiliklar</p>
-          <p>Katalog</p>
+          <ul>
+            <li><a href="#">Chegirmalar</a></li>
+            <li><a href="#">Yangiliklar</a></li>
+            <li><a href="#">Katalog</a></li>
+          </ul>
         </div>
+
         <div>
           <h6>Bog'lanish</h6>
-          <p><a class="contact" href="tel:998900707211" style="text-decoration: none;">+998-90-070-72-11</a></p>
-          <p>Andijon, Shaxrixon 96-uy</p>
-          <p>info@elegant_shoes.uz</p>
-          <p>Telegram_Bot</p>
+          <ul>
+            <li>
+              <a href="#">
+                <b-icon style="color: #fff" icon="telephone"> </b-icon>
+                <span class="socialLinkText">+998-90-070-72-11</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b-icon style="color: #fff" icon="house-door"> </b-icon>
+                <span class="socialLinkText">Andijon, Shaxrixon 96-uy</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b-icon style="color: #fff" icon="briefcase"> </b-icon>
+                <span class="socialLinkText">info@elegant_shoes.uz</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b-icon style="color: #fff" icon="telegram"> </b-icon>
+                <span class="socialLinkText">Telegram_Bot</span>
+              </a>
+            </li>
+          </ul>
         </div>
+
         <div>
           <h6>Bizning ishtimoiy tarmoqlar</h6>
-          <b-icon style="color:#FFF" icon="telegram"> </b-icon>
-          <p>Telegram</p>
-          <p>Instagram</p>
-          <p>Facebook</p>
-          <p>YouTube</p>
+          <ul>
+            <li>
+              <a href="#">
+                <b-icon style="color: #fff" icon="telegram"> </b-icon>
+                <span class="socialLinkText">Telegram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b-icon style="color: #fff" icon="instagram"> </b-icon>
+                <span class="socialLinkText">Instagram </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <b-icon style="color: #fff" icon="facebook"> </b-icon>
+                <span class="socialLinkText">Facebook</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <b-icon style="color: #fff" icon="youtube"> </b-icon>
+                <span class="socialLinkText">YouTube</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -34,7 +84,7 @@
 <script>
 import { BIcon } from "bootstrap-vue";
 export default {
-    comments: { BIcon },
+  comments: { BIcon },
   data() {
     return {};
   },
@@ -45,9 +95,9 @@ export default {
 <style lang="scss">
 footer {
   background-color: $color-dark;
-  padding: 70px 0 90px;
+  padding: 70px 0 90px 0;
 }
-.contact{
+.contact {
   color: $color-grey;
 }
 .content {
@@ -57,47 +107,34 @@ footer {
   color: $color-grey-light;
 }
 
-.content img {
-  cursor: pointer;
+h6 {
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
-.content h6 {
-  margin-bottom: 12px;
-  color: #FFF;
-}
-
-
-.content p {
+ul li a {
   color: $color-grey;
   letter-spacing: 0.4px;
   line-height: 10px;
-  // position: relative;
-  // cursor: pointer;
+  text-decoration: none;
 }
-.content p:hover{
-  color: #FFF;
-}
-.content p a:hover{
-  color: #FFF;
-}
-// .content p::before {
-//   content: "";
-//   background-color: #f2d500;
-//   position: absolute;
-//   left: 0;
-//   bottom: -0.3rem;
-//   height: 2px;
-//   width: 0;
-//   transition: 0.3s ease-in-out;
-// }
 
-// .content p:hover::before {
-//   content: "";
-//   background-color: #f2d500;
-//   position: absolute;
-//   left: 0;
-//   bottom: -0.3rem;
-//   height: 2px;
-//   width: 100%;
-// }
+ul li a:hover .socialLinkText {
+  color: #fff;
+  margin-left: 10px;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+.socialLinkText {
+  margin-left: 6px;
+  transition: all 0.5s;
+}
 </style>

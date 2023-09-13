@@ -30,4 +30,14 @@ export default {
   max-width: $breakpoint-lg;
   padding: 0 15px;
 }
+
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  text-decoration: none;
+}
 </style>
