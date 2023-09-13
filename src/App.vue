@@ -30,8 +30,4 @@ export default {
   max-width: $breakpoint-lg;
   padding: 0 15px;
 }
-
-router-link{
-    text-decoration: none;
-}
 </style>

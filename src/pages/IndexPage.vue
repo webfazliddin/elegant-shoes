@@ -9,7 +9,7 @@
         />
       </div>
 
-      <div class="products__list" v-if="!isLoading" @click="callModal">
+      <div class="products__list" v-if="!isLoading"  @click="callModal">
         <ProductCard
           v-for="product in productList"
           :key="`productCard__${product.id}`"
@@ -18,7 +18,7 @@
         />
       </div>
 
-      <DialogCard v-if="isShowModal" :title="'Title'" @close="close">
+      <DialogCard v-if="isShowModal" :title="'ffdfdfd'" @close="close">
           <template #body> Modal Body </template>
           <template #footer>
             <button>Cancel</button>
