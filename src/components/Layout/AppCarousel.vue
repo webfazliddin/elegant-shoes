@@ -1,49 +1,62 @@
 <template>
- <div class="container">
-  <b-carousel
-    id="carousel-fade"
-    style="text-shadow: 0px 0px 2px #000;border-radius: 60px;"
-    fade
-    indicators
-    img-width="1024"
-    img-height="480"
-  >
-    <b-carousel-slide
-      caption="First Slide"
-      img-src="https://picsum.photos/1024/480/?image=10"
-    ></b-carousel-slide>
-    <b-carousel-slide
-      caption="Second Slide"
-      img-src="https://picsum.photos/1024/480/?image=12"
-    ></b-carousel-slide>
-    <b-carousel-slide
-      caption="Third Slide"
-      img-src="https://picsum.photos/1024/480/?image=22"
-    ></b-carousel-slide>
-  </b-carousel>
-</div>
+  <div class="container">
+    <b-carousel class="carousel"
+      id="carousel-fade"
+      style="text-shadow: 0px 0px 2px #000;margin-top:30px"
+      fade
+    >
+      <b-carousel-slide>
+        <template #img>
+          <div style="background-color:#45BBD7; border-radius:50px" class="main-carousel-img">
+            <img src="@/assets/product/lightBlue-shoes.png" alt />
+          </div>
+        </template>
+      </b-carousel-slide>
+      <b-carousel-slide>
+        <template #img>
+          <div style="background-color:#EB7B8F;border-radius:50px" class="main-carousel-img">
+            <img src="@/assets/product/mixColor-shoes.png" alt />
+          </div>
+        </template>
+      </b-carousel-slide>
+      <b-carousel-slide>
+        <template #img>
+          <div style="background-color:#68C3DB;border-radius:50px" class="main-carousel-img">
+            <img src="@/assets/product/white-shoes.png" alt />
+          </div>
+        </template>
+      </b-carousel-slide>
+    </b-carousel>
+  </div>
 </template>
 
 <script>
-import {
-  BCarousel,
-  BCarouselSlide
-} from "bootstrap-vue";
- export default {
-    comments:{BCarousel,  BCarouselSlide},
-    data() {
-      return {
-        slide: 0,
-        sliding: null
-      }
+import { BCarousel, BCarouselSlide } from "bootstrap-vue";
+export default {
+  comments: { BCarousel, BCarouselSlide },
+  data() {
+    return {
+      slide: 0,
+      sliding: null
+    };
+  },
+  methods: {
+    onSlideStart() {
+      this.sliding = true;
     },
-    methods: {
-      onSlideStart() {
-        this.sliding = true
-      },
-      onSlideEnd() {
-        this.sliding = false
-      }
+    onSlideEnd() {
+      this.sliding = false;
     }
   }
+};
 </script>
+<style>
+.main-carousel-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel img{
+  height: 440px;
+}
+</style>

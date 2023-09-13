@@ -7,14 +7,12 @@
             <div>
               <img style="width: 40px" src="@/assets/header/TF.png" />
             </div>
-
             <div style="line-height: 20px;">
               <div class="header__logo--elegant">Elegant</div>
               <div class="header__logo--shoes">shoes</div>
             </div>
           </div>
         </router-link>
-
         <div class="header__right">
           <div class="header__right--place">
             <div><img src="../../assets/header/location.png" /></div>
@@ -23,7 +21,7 @@
 
           <div class="header__right--phone">
             <div><img src="../../assets/header/contact.png" /></div>
-            <div>+998-97-346-26-36</div>
+            <a href="tel:998973462636" style="text-decoration: none; color: black;">+998-97-346-26-36</a>
           </div>
         </div>
       </div>
