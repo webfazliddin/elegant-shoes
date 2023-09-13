@@ -12,16 +12,18 @@
           <p>Katalog</p>
         </div>
         <div>
-          <h6>Asosiy</h6>
-          <p>Bosh sahifa</p>
-          <p>Chegirmalar</p>
-          <p>Yangiliklar</p>
-          <p>Katalog</p>
+          <h6>Bog'lanish</h6>
+          <p><a class="contact" href="tel:998900707211" style="text-decoration: none;">+998-90-070-72-11</a></p>
+          <p>Andijon, Shaxrixon 96-uy</p>
+          <p>info@elegant_shoes.uz</p>
+          <p>Telegram_Bot</p>
         </div>
         <div>
-          <h6>Kontakt</h6>
-          <p>+9989-90-7072-11</p>
-          <p>info@elegant_shoes.uz</p>
+          <h6>Bizning ishtimoiy tarmoqlar</h6>
+          <p>Telegram</p>
+          <p>Instagram</p>
+          <p>Facebook</p>
+          <p>YouTube</p>
         </div>
       </div>
     </div>
@@ -40,9 +42,11 @@ export default {
 <style lang="scss">
 footer {
   background-color: $color-dark;
-  padding: 40px 0 90px;
+  padding: 70px 0 90px;
 }
-
+.contact{
+  color: $color-grey;
+}
 .content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -66,24 +70,24 @@ footer {
   cursor: pointer;
 }
 
-.content p::before {
-  content: "";
-  background-color: #f2d500;
-  position: absolute;
-  left: 0;
-  bottom: -0.3rem;
-  height: 2px;
-  width: 0;
-  transition: 0.3s ease-in-out;
-}
+// .content p::before {
+//   content: "";
+//   background-color: #f2d500;
+//   position: absolute;
+//   left: 0;
+//   bottom: -0.3rem;
+//   height: 2px;
+//   width: 0;
+//   transition: 0.3s ease-in-out;
+// }
 
-.content p:hover::before {
-  content: "";
-  background-color: #f2d500;
-  position: absolute;
-  left: 0;
-  bottom: -0.3rem;
-  height: 2px;
-  width: 100%;
-}
+// .content p:hover::before {
+//   content: "";
+//   background-color: #f2d500;
+//   position: absolute;
+//   left: 0;
+//   bottom: -0.3rem;
+//   height: 2px;
+//   width: 100%;
+// }
 </style>
