@@ -21,7 +21,8 @@
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="telephone"> </b-icon>
-                <span class="socialLinkText">+998-90-070-72-11</span>
+                <!-- <span class="socialLinkText">+998-90-070-72-11</span> -->
+                <a href="tel:998900707211" style="text-decoration: none;" class="socialLinkText">+998-90-070-72-11</a>
               </a>
             </li>
             <li>
