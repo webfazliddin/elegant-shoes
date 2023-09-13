@@ -20,6 +20,7 @@
         </div>
         <div>
           <h6>Bizning ishtimoiy tarmoqlar</h6>
+          <b-icon style="color:#FFF" icon="telegram"> </b-icon>
           <p>Telegram</p>
           <p>Instagram</p>
           <p>Facebook</p>
@@ -31,7 +32,9 @@
 </template>
 
 <script>
+import { BIcon } from "bootstrap-vue";
 export default {
+    comments: { BIcon },
   data() {
     return {};
   },
@@ -60,16 +63,23 @@ footer {
 
 .content h6 {
   margin-bottom: 12px;
+  color: #FFF;
 }
+
 
 .content p {
   color: $color-grey;
   letter-spacing: 0.4px;
   line-height: 10px;
-  position: relative;
-  cursor: pointer;
+  // position: relative;
+  // cursor: pointer;
 }
-
+.content p:hover{
+  color: #FFF;
+}
+.content p a:hover{
+  color: #FFF;
+}
 // .content p::before {
 //   content: "";
 //   background-color: #f2d500;
