@@ -16,7 +16,7 @@
         <div class="header__right">
           <div class="header__right--place">
             <div><img style="margin-top:-10px" src="../../assets/header/location.png" /></div>
-             <a href="https://www.google.com/maps/place/40%C2%B043'57.4%22N+72%C2%B009'42.9%22E/@40.7326151,72.1593418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7326111!4d72.1619167?entry=ttu" style="text-decoration: none; color: black;">Manzil</a>
+             <a target="_blank" href="https://www.google.com/maps/place/40%C2%B043'57.4%22N+72%C2%B009'42.9%22E/@40.7326151,72.1593418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7326111!4d72.1619167?entry=ttu" style="text-decoration: none; color: black;">Manzil</a>
           </div>
 
           <div class="header__right--phone">
