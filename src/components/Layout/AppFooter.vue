@@ -9,9 +9,9 @@
         <div>
           <h6>Biz haqimizda</h6>
           <ul>
-            <li><a href="#">Chegirmalar</a></li>
-            <li><a href="#">Yangiliklar</a></li>
-            <li><a href="#">Katalog</a></li>
+            <li><a class="socialLinkText" href="#">Chegirmalar</a></li>
+            <li><a class="socialLinkText" href="#">Yangiliklar</a></li>
+            <li><a class="socialLinkText" href="#">Katalog</a></li>
           </ul>
         </div>
 
@@ -135,6 +135,12 @@ li {
 
 .socialLinkText {
   margin-left: 6px;
+  transition: all 0.5s;
+}
+
+.socialLinkText:hover {
+  color: #fff;
+  margin-left: 10px;
   transition: all 0.5s;
 }
 </style>

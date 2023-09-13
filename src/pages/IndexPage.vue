@@ -4,7 +4,7 @@
       <!-- ============Product card=========== -->
       <div class="products__list" v-if="isLoading">
         <ProductCardSkeleton
-          v-for="(_, index) in Array.from({ length: 8 }).fill(0)"
+          v-for="(_, index) in Array.from({ length: 12 }).fill(0)"
           :key="`productSkeleton__${index}`"
         />
       </div>
@@ -16,7 +16,14 @@
           :image="product.image"
           :title="product.name"
         />
+        <ProductCard
+          v-for="product in productList"
+          :key="`productCard__${product.id}`"
+          :image="product.image"
+          :title="product.name"
+        />
       </div>
+
 
       <DialogCard v-if="isShowModal" :title="'ffdfdfd'" @close="close">
           <template #body> Modal Body </template>
