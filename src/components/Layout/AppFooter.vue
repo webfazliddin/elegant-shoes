@@ -45,6 +45,7 @@ footer {
 
 .content {
   display: flex;
+  margin-top: 30px;
   gap: 300px;
   font-family: $base-font;
   color: $color-grey-light;

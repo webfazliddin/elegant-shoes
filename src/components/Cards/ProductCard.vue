@@ -8,7 +8,7 @@
       <div class="card__body">
         <div>
           <div class="card__title">{{ title }}</div>
-          <div @click="openModal">
+          <div>
             <img src="../../assets/product/eye.png" alt />
           </div>
         </div>
@@ -84,7 +84,7 @@ export default {
   }
 
   &__body {
-    padding: 16px;
+    padding: 20px;
 
     div {
       display: flex;
