@@ -44,9 +44,8 @@ footer {
 }
 
 .content {
-  display: flex;
-  margin-top: 30px;
-  gap: 300px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   font-family: $base-font;
   color: $color-grey-light;
 }
