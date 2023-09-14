@@ -13,8 +13,8 @@
           </div>
         </div>
         <div class="card__text">
-          <p class="card__p1">149ming</p>
-          <p class="card__p2">250ming</p>
+          <p class="card__p1">149 {{ $t("ming") }}</p>
+          <p class="card__p2">250 {{ $t("ming") }}</p>
         </div>
       </div>
       <!-- <b-modal

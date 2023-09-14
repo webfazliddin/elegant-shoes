@@ -7,73 +7,71 @@
         </div>
 
         <div>
-          <h6>Biz haqimizda</h6>
+          <h6>{{ $t("Biz haqimizda") }}</h6>
           <ul>
-            <li><a class="AboutUs" href="#">Batafsil</a></li>
-            <li><a class="AboutUs" href="#">Yangiliklar</a></li>
-            <li><a class="AboutUs" href="#">{{ $t("hello") }}</a></li>
-            <!-- <button @click="changeLocale('fr')">Switch to French</button> -->
+            <li><a class="AboutUs" href="#">{{ $t("Batafsil") }}</a></li>
+            <li><a class="AboutUs" href="#">{{ $t("Yangiliklar") }}</a></li>
+            <button @click="changeLocale('uzCyrillic')">kril</button>
           </ul>
         </div>
 
         <div>
-          <h6>Bog'lanish</h6>
+          <h6>{{ $t("Bog'lanish")}}</h6>
           <ul>
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="telephone"> </b-icon>
-                <!-- <span class="socialLinkText">+998-90-070-72-11</span> -->
                 <a href="tel:998900707211" style="text-decoration: none;" class="socialLinkText">+998-90-070-72-11</a>
               </a>
             </li>
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="house-door"> </b-icon>
-                <span class="socialLinkText">Andijon, Shaxrixon 96-uy</span>
+                <span class="socialLinkText">{{ $t("Andijon, Shaxrixon 96-uy") }}</span>
               </a>
             </li>
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="briefcase"> </b-icon>
-                <span class="socialLinkText">info@elegant_shoes.uz</span>
+                <span class="socialLinkText">{{ $t("info@elegant_shoes.uz") }}</span>
               </a>
             </li>
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="telegram"> </b-icon>
-                <span class="socialLinkText">Telegram_Bot</span>
+                <span class="socialLinkText">{{ $t("Telegram_Bot") }}</span>
               </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h6>Bizning ishtimoiy tarmoqlar</h6>
+          <h6>{{ $t("Bizning ishtimoiy tarmoqlar") }}</h6>
           <ul>
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="telegram"> </b-icon>
-                <span class="socialLinkText">Telegram</span>
+                <span class="socialLinkText">{{ $t("Telegram") }}</span>
               </a>
             </li>
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="instagram"> </b-icon>
-                <span class="socialLinkText">Instagram </span>
+                <span class="socialLinkText">{{ $t("Instagram") }}</span>
               </a>
             </li>
 
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="facebook"> </b-icon>
-                <span class="socialLinkText">Facebook</span>
+                <span class="socialLinkText">{{ $t("Facebook") }}</span>
               </a>
             </li>
 
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="youtube"> </b-icon>
-                <span class="socialLinkText">YouTube</span>
+                <span class="socialLinkText">{{ $t("YouTube") }}</span>
               </a>
             </li>
           </ul>
@@ -91,9 +89,9 @@ export default {
     return {};
   },
   methods: {
-  //   changeLocale(locale) {
-  //   this.$i18n.locale = locale;
-  // },
+    changeLocale(locale) {
+    this.$i18n.locale = locale;
+  },
   },
 };
 </script>
