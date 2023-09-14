@@ -9,9 +9,10 @@
         <div>
           <h6>Biz haqimizda</h6>
           <ul>
-            <li><a class="socialLinkText" href="#">Chegirmalar</a></li>
-            <li><a class="socialLinkText" href="#">Yangiliklar</a></li>
-            <li><a class="socialLinkText" href="#">Katalog</a></li>
+            <li><a class="AboutUs" href="#">Batafsil</a></li>
+            <li><a class="AboutUs" href="#">Yangiliklar</a></li>
+            <li><a class="AboutUs" href="#">{{ $t("hello") }}</a></li>
+            <!-- <button @click="changeLocale('fr')">Switch to French</button> -->
           </ul>
         </div>
 
@@ -89,7 +90,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+  //   changeLocale(locale) {
+  //   this.$i18n.locale = locale;
+  // },
+  },
 };
 </script>
 
@@ -124,6 +129,10 @@ ul li a:hover .socialLinkText {
   color: #fff;
   margin-left: 10px;
 }
+ul li a:hover.AboutUs {
+  color: #fff;
+  margin-left: 10px;
+}
 
 ol,
 ul {
@@ -140,6 +149,16 @@ li {
 }
 
 .socialLinkText:hover {
+  color: #fff;
+  margin-left: 10px;
+  transition: all 0.5s;
+}
+.AboutUs {
+  // margin-left: 6px;
+  transition: all 0.5s;
+}
+
+.AboutUs:hover {
   color: #fff;
   margin-left: 10px;
   transition: all 0.5s;
