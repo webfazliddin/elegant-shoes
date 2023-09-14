@@ -23,6 +23,11 @@
             <div><img src="../../assets/header/contact.png" /></div>
             <a href="tel:998900707211" style="text-decoration: none; color: black;">+998-90-070-72-11</a>
           </div>
+          <div>
+            <select id="language-select" v-model="selectedLocale" @change="changeLocale">
+              <option v-for="(item, index) in supportedLocales" :key="index" :value="item.id">{{ item.name }}</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
@@ -30,11 +35,21 @@
 </template>
 
 <script>
+// import { CDropdown, CHeaderNavLink, CDropdownItem, BIcon } from "bootstrap-vue";
+
 export default {
+  // comments: { CDropdown, CHeaderNavLink, CDropdownItem, BIcon },
   name: "AppHeader",
   data() {
     return {
       scrolled: false,
+       langvalue: "",
+      selectedLocale: 2,
+      supportedLocales: [
+        { id: 1, name: this.$t("uzCyrillic") },
+        { id: 2, name: this.$t("uzLang") },
+        { id: 3, name: this.$t("russianLanguage") }
+      ]
     };
   },
 
@@ -42,9 +57,23 @@ export default {
     handleScroll() {
       this.scrolled = window.scrollY > 0;
     },
+      changeLocale() {
+      if(this.selectedLocale == 1){
+       this.langvalue = "uzCyrillic"
+      }
+      else if(this.selectedLocale == 2){
+        this.langvalue = "uzLang"
+      }
+      else {
+         this.langvalue = "russianLanguage"
+      }
+      console.log(this.langvalue);
+      this.$i18n.locale = this.langvalue;
+    }
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
+    this.$i18n.locale = this.langvalue;
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);

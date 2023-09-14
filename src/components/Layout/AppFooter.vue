@@ -9,9 +9,12 @@
         <div>
           <h6>{{ $t("Biz haqimizda") }}</h6>
           <ul>
-            <li><a class="AboutUs" href="#">{{ $t("Batafsil") }}</a></li>
-            <li><a class="AboutUs" href="#">{{ $t("Yangiliklar") }}</a></li>
-            <button @click="changeLocale('uzCyrillic')">kril</button>
+            <li>
+              <a class="AboutUs" href="#">{{ $t("Batafsil") }}</a>
+            </li>
+            <li>
+              <a class="AboutUs" href="#">{{ $t("Yangiliklar") }}</a>
+            </li>
           </ul>
         </div>
 
@@ -20,25 +23,29 @@
           <ul>
             <li>
               <a href="#">
-                <b-icon style="color: #fff" icon="telephone"> </b-icon>
-                <a href="tel:998900707211" style="text-decoration: none;" class="socialLinkText">+998-90-070-72-11</a>
+                <b-icon style="color: #fff" icon="telephone"></b-icon>
+                <a
+                  href="tel:998900707211"
+                  style="text-decoration: none;"
+                  class="socialLinkText"
+                >+998-90-070-72-11</a>
               </a>
             </li>
             <li>
               <a href="#">
-                <b-icon style="color: #fff" icon="house-door"> </b-icon>
+                <b-icon style="color: #fff" icon="house-door"></b-icon>
                 <span class="socialLinkText">{{ $t("Andijon, Shaxrixon 96-uy") }}</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <b-icon style="color: #fff" icon="briefcase"> </b-icon>
+                <b-icon style="color: #fff" icon="briefcase"></b-icon>
                 <span class="socialLinkText">{{ $t("info@elegant_shoes.uz") }}</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <b-icon style="color: #fff" icon="telegram"> </b-icon>
+                <b-icon style="color: #fff" icon="telegram"></b-icon>
                 <span class="socialLinkText">{{ $t("Telegram_Bot") }}</span>
               </a>
             </li>
@@ -50,27 +57,27 @@
           <ul>
             <li>
               <a href="#">
-                <b-icon style="color: #fff" icon="telegram"> </b-icon>
+                <b-icon style="color: #fff" icon="telegram"></b-icon>
                 <span class="socialLinkText">{{ $t("Telegram") }}</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <b-icon style="color: #fff" icon="instagram"> </b-icon>
+                <b-icon style="color: #fff" icon="instagram"></b-icon>
                 <span class="socialLinkText">{{ $t("Instagram") }}</span>
               </a>
             </li>
 
             <li>
               <a href="#">
-                <b-icon style="color: #fff" icon="facebook"> </b-icon>
+                <b-icon style="color: #fff" icon="facebook"></b-icon>
                 <span class="socialLinkText">{{ $t("Facebook") }}</span>
               </a>
             </li>
 
             <li>
               <a href="#">
-                <b-icon style="color: #fff" icon="youtube"> </b-icon>
+                <b-icon style="color: #fff" icon="youtube"></b-icon>
                 <span class="socialLinkText">{{ $t("YouTube") }}</span>
               </a>
             </li>
@@ -86,13 +93,13 @@ import { BIcon } from "bootstrap-vue";
 export default {
   comments: { BIcon },
   data() {
-    return {};
+    return {
+    };
+  },
+  created() {
   },
   methods: {
-    changeLocale(locale) {
-    this.$i18n.locale = locale;
-  },
-  },
+  }
 };
 </script>
 
