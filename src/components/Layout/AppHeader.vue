@@ -15,16 +15,27 @@
         </router-link>
         <div class="header__right">
           <div class="header__right--place">
-            <div><img style="margin-top:-10px" src="../../assets/header/location.png" /></div>
-             <a target="_blank" href="https://www.google.com/maps/place/40%C2%B043'57.4%22N+72%C2%B009'42.9%22E/@40.7326151,72.1593418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7326111!4d72.1619167?entry=ttu" style="text-decoration: none; color: black;">{{ $t("Manzil") }}</a>
+            <div>
+              <img style="margin-top:-10px" src="../../assets/header/location.png" />
+            </div>
+            <a
+              target="_blank"
+              href="https://www.google.com/maps/place/40%C2%B043'57.4%22N+72%C2%B009'42.9%22E/@40.7326151,72.1593418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7326111!4d72.1619167?entry=ttu"
+              style="text-decoration: none; color: black;"
+            >{{ $t("Manzil") }}</a>
           </div>
 
           <div class="header__right--phone">
-            <div><img src="../../assets/header/contact.png" /></div>
-            <a href="tel:998900707211" style="text-decoration: none; color: black;">+998-90-070-72-11</a>
+            <div>
+              <img src="../../assets/header/contact.png" />
+            </div>
+            <a
+              href="tel:998900707211"
+              style="text-decoration: none; color: black;"
+            >+998-90-070-72-11</a>
           </div>
-          <div>
-            <select id="language-select" v-model="selectedLocale" @change="changeLocale">
+          <div  class="header__right--phone">
+            <select class="Select" id="language-select" v-model="selectedLocale" @change="changeLocale">
               <option v-for="(item, index) in supportedLocales" :key="index" :value="item.id">{{ item.name }}</option>
             </select>
           </div>
@@ -35,15 +46,15 @@
 </template>
 
 <script>
-// import { CDropdown, CHeaderNavLink, CDropdownItem, BIcon } from "bootstrap-vue";
+import { BDropdown, BDropdownItem, BIcon } from "bootstrap-vue";
 
 export default {
-  // comments: { CDropdown, CHeaderNavLink, CDropdownItem, BIcon },
+  comments: { BDropdown, BDropdownItem, BIcon },
   name: "AppHeader",
   data() {
     return {
       scrolled: false,
-       langvalue: "",
+      langvalue: "",
       selectedLocale: 2,
       supportedLocales: [
         { id: 1, name: this.$t("uzCyrillic") },
@@ -57,15 +68,13 @@ export default {
     handleScroll() {
       this.scrolled = window.scrollY > 0;
     },
-      changeLocale() {
-      if(this.selectedLocale == 1){
-       this.langvalue = "uzCyrillic"
-      }
-      else if(this.selectedLocale == 2){
-        this.langvalue = "uzLang"
-      }
-      else {
-         this.langvalue = "russianLanguage"
+    changeLocale() {
+      if (this.selectedLocale == 1) {
+        this.langvalue = "uzCyrillic";
+      } else if (this.selectedLocale == 2) {
+        this.langvalue = "uzLang";
+      } else {
+        this.langvalue = "russianLanguage";
       }
       console.log(this.langvalue);
       this.$i18n.locale = this.langvalue;
@@ -77,7 +86,7 @@ export default {
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
-  },
+  }
 };
 </script>
 <style lang="scss">
@@ -151,6 +160,14 @@ export default {
 }
 .scroll {
   box-shadow: 0 0 10px rgba(168, 168, 168, 0.4);
+}
+.Select{
+  width: 48px;
+  height: auto;
+  cursor: pointer;
+  color: #4d5fff;
+  border-radius: 15px;
+  border: 1px solid #4d5fff;
 }
 
 // =========Mobile breakpoint==========
