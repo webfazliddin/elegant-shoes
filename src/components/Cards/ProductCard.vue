@@ -17,9 +17,8 @@
         </div>
       </div>
             <b-modal
-                size="lg"
+                size="xl"
                 v-model="ProductModal"
-                no-close-on-backdrop
                 hide-footer
               >
               <p>Hello World</p>
