@@ -9,7 +9,8 @@
         <div>
           <div class="card__title">Loro Piano</div>
           <div>
-            <img src="../../assets/product/eye.png" alt />
+            <!-- <img src="../../assets/product/eye.png" alt /> -->
+            <b-icon style="color:#4d5fff;" icon="eye"></b-icon>
           </div>
         </div>
         <div class="card__text">
@@ -30,11 +31,10 @@
 </template>
 
 <script>
-// import { BModal, BCarousel } from "bootstrap-vue";
+import {  BIcon } from "bootstrap-vue";
 export default {
   components: {
-    // BModal,
-    // BCarousel,
+    BIcon
   },
   name: "ProductCard",
   props: {
