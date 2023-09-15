@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <div></div>
     <div class="card">
       <div class="card__image">
         <img src="../../assets/product/shoesel.webp" />
@@ -10,7 +8,7 @@
           <div class="card__title">Loro Piano</div>
           <div>
             <!-- <img src="../../assets/product/eye.png" alt /> -->
-            <b-icon style="color:#4d5fff;" icon="eye"></b-icon>
+            <b-icon @click="openModal" style="color:#4d5fff;" icon="eye"></b-icon>
           </div>
         </div>
         <div class="card__text">
@@ -18,23 +16,23 @@
           <p class="card__p2">250 {{ $t("ming") }}</p>
         </div>
       </div>
-      <!-- <b-modal
-            size="lg"
-            v-model="ProductModal"
-            no-close-on-backdrop
-            hide-footer
-          >
-          <p>hello world</p>
-      </b-modal> -->
+            <b-modal
+                size="lg"
+                v-model="ProductModal"
+                no-close-on-backdrop
+                hide-footer
+              >
+              <p>Hello World</p>
+          </b-modal>
     </div>
-  </div>
 </template>
 
 <script>
-import {  BIcon } from "bootstrap-vue";
+import {  BIcon, BModal } from "bootstrap-vue";
 export default {
   components: {
-    BIcon
+    BIcon,
+    BModal
   },
   name: "ProductCard",
   props: {
@@ -51,21 +49,13 @@ export default {
   data() {
     return {
       ProductModal: false,
-      slide: 0,
-      sliding: null,
     };
   },
-  // methods: {
-  //   openModal() {
-  //     this.ProductModal = true;
-  //   },
-  //   onSlideStart(slide) {
-  //     this.sliding = true;
-  //   },
-  //   onSlideEnd(slide) {
-  //     this.sliding = false;
-  //   },
-  // },
+  methods: {
+    openModal() {
+      this.ProductModal = true;
+    },
+  },
 };
 </script>
 
