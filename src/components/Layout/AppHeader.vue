@@ -20,10 +20,7 @@
         <div class="header__right">
           <div class="header__right--place">
             <div>
-              <img
-                style="margin-top: -10px"
-                src="../../assets/header/location.png"
-              />
+              <b-icon style="color: #4e60ff" icon="geo-alt"></b-icon>
             </div>
             <a
               target="_blank"
@@ -35,7 +32,7 @@
 
           <div class="header__right--phone">
             <div>
-              <img src="../../assets/header/contact.png" />
+              <b-icon style="color: #4e60ff" icon="telephone"></b-icon>
             </div>
             <a
               href="tel:998900707211"
@@ -44,7 +41,7 @@
             >
           </div>
           <div class="header__right--lang">
-            <b-icon icon="globe"></b-icon>
+            <b-icon style="color: #4e60ff" icon="globe"></b-icon>
           </div>
           <!-- <div class="header__right--lang">
             <select
@@ -63,7 +60,7 @@
             </select>
           </div> -->
           <div class="header__right--mobileMenuIcon">
-            <img src="../../assets/header/menu.png" alt="" />
+            <b-icon style="color: #4e60ff" icon="list"></b-icon>
           </div>
         </div>
       </div>
@@ -163,24 +160,32 @@ export default {
       margin-right: 30px;
       cursor: pointer;
 
-      & > div > img {
+      & > div {
         margin-right: 6px;
       }
     }
+
     &--phone {
       display: flex;
       align-items: center;
-      margin: -3px 0 0 5px;
       cursor: pointer;
 
-      & > div > img {
+      & > div {
         margin-right: 6px;
       }
-    }
-  }
 
-  &__mobileMenuIcon {
+      a {
+        margin-right: 16px;
+      }
+    }
+
+    &--lang {
+      cursor: pointer;
+    }
+
+    &--mobileMenuIcon {
     display: none;
+  }
   }
 }
 .scroll {
@@ -210,40 +215,44 @@ export default {
     &__right {
       &--place {
         margin-right: 10px;
-        & > div > img {
-          width: 20px;
-        margin-right: 2px;
-      }
+        & > div {
+          margin-right: 2px;
+          background-color: #edeef2;
+          padding: 12px;
+          border-radius: 12px;
+        }
 
-       a {
-        font-size: 8px;
-       }
+        a {
+          display: none;
+        }
       }
 
       &--phone {
         margin-right: 10px;
-        & > div > img {
-          width: 20px;
-        margin-right: 2px;
-      }
-       a {
-        font-size: 8px;
-       }
+        & > div {
+          margin-right: 2px;
+          background: #edeef2;
+          padding: 12px;
+          border-radius: 12px;
+        }
+        a {
+          display: none;
+        }
       }
 
       &--lang {
-      background: #EDEEF2;
-      padding: 12px;
-      border-radius: 12px;
-      margin-right: 10px;
+        background: #edeef2;
+        padding: 12px;
+        border-radius: 12px;
+        margin-right: 10px;
       }
 
       &--mobileMenuIcon {
-      display: block;
-      background: #EDEEF2;
-      padding: 12px;
-      border-radius: 12px;
-    }
+        display: block;
+        background: #edeef2;
+        padding: 12px;
+        border-radius: 12px;
+      }
     }
   }
 }

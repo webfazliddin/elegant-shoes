@@ -173,7 +173,7 @@ li {
 @media screen and (max-width: 768px) {
   .footerContent {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
     &__logo {
       margin-bottom: 16px;
     }
