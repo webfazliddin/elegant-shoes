@@ -44,7 +44,6 @@
     </div>
   </header>
 </template>
-
 <script>
 import { BDropdown, BDropdownItem, BIcon } from "bootstrap-vue";
 
