@@ -9,7 +9,7 @@
         />
       </div>
 
-      <div class="products__list" v-if="!isLoading"  @click="callModal">
+      <div class="products__list" v-if="!isLoading" >
         <ProductCard
           v-for="product in productList"
           :key="`productCard__${product.id}`"
@@ -24,21 +24,12 @@
         />
       </div>
 
-
-      <DialogCard v-if="isShowModal" :title="'ffdfdfd'" @close="close">
-          <template #body> Modal Body </template>
-          <template #footer>
-            <button>Cancel</button>
-            <button>Send</button>
-          </template>
-        </DialogCard>
     </div>
   </section>
 </template>
 
 <script>
 import client from "../api";
-import DialogCard from "@/components/Cards/DialogCard.vue";
 
 export default {
   name: "IndexPage",
@@ -48,9 +39,6 @@ export default {
       isShowModal: false,
       productList: [],
     };
-  },
-  components: {
-    DialogCard
   },
   methods: {
     loadData() {
@@ -63,12 +51,6 @@ export default {
       Promise.all([promise1]).finally(() => {
         this.isLoading = false;
       });
-    },
-    close() {
-      this.isShowModal = false;
-    },
-    callModal() {
-      this.isShowModal = true;
     },
   },
   mounted() {
