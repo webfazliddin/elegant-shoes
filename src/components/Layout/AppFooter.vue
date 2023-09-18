@@ -173,11 +173,11 @@ li {
 @media screen and (max-width: 768px) {
   .footerContent {
     grid-template-columns: 1fr;
-    text-align: left;
+    text-align: center;
     &__logo {
       margin-bottom: 16px;
     }
-  }
+  }s
 
   h6 {
     font-size: 14px;
