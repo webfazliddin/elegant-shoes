@@ -1,33 +1,44 @@
 <template>
-    <div class="card">
-      <div class="card__image">
-        <img src="../../assets/product/shoesel.webp" />
-      </div>
-      <div class="card__body">
+  <div class="card">
+    <div class="card__image">
+      <img src="../../assets/product/shoesel.webp" />
+    </div>
+    <div class="card__body">
+      <div>
+        <div class="card__title">Loro Piano</div>
         <div>
-          <div class="card__title">Loro Piano</div>
+          <!-- <img src="../../assets/product/eye.png" alt /> -->
+          <b-icon @click="openModal" style="color:#4d5fff;" icon="eye"></b-icon>
+        </div>
+      </div>
+      <div class="card__text">
+        <p class="card__p1">149 {{ $t("ming") }}</p>
+        <p class="card__p2">250 {{ $t("ming") }}</p>
+      </div>
+    </div>
+    <b-modal size="xl" v-model="ProductModal" hide-footer>
+      <div class="ViewProducts">
+        <div class="ProductList">
           <div>
-            <!-- <img src="../../assets/product/eye.png" alt /> -->
-            <b-icon @click="openModal" style="color:#4d5fff;" icon="eye"></b-icon>
+            <img src="../../assets/product/images.jpg" />
+          </div>
+          <div>
+            <img src="../../assets/product/images.jpg" />
+          </div>
+          <div>
+            <img src="../../assets/product/images.jpg" />
           </div>
         </div>
-        <div class="card__text">
-          <p class="card__p1">149 {{ $t("ming") }}</p>
-          <p class="card__p2">250 {{ $t("ming") }}</p>
+        <div class="mainProduct">
+          <img src="../../assets/product/images.jpg" />
         </div>
       </div>
-            <b-modal
-                size="xl"
-                v-model="ProductModal"
-                hide-footer
-              >
-              <p>Hello World</p>
-          </b-modal>
-    </div>
+    </b-modal>
+  </div>
 </template>
 
 <script>
-import {  BIcon, BModal } from "bootstrap-vue";
+import { BIcon, BModal } from "bootstrap-vue";
 export default {
   components: {
     BIcon,
@@ -36,25 +47,25 @@ export default {
   name: "ProductCard",
   props: {
     image: {
-      type: String,
+      type: String
       // default:
       //   "https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png"
     },
     title: {
       type: String,
-      default: "",
-    },
+      default: ""
+    }
   },
   data() {
     return {
-      ProductModal: false,
+      ProductModal: false
     };
   },
   methods: {
     openModal() {
       this.ProductModal = true;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -117,5 +128,19 @@ export default {
     font-weight: bold;
     text-decoration: line-through;
   }
+}
+.ProductList img {
+  width: 140px;
+  height: auto;
+  padding: 10px 0 0 0;
+}
+.ViewProducts {
+  display: flex;
+  gap: 180px;
+}
+.mainProduct img{
+  width: 440px !important;
+  height: auto;
+   padding: 10px 0 0 0;
 }
 </style>
