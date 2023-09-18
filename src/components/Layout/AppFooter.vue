@@ -1,8 +1,8 @@
 <template>
   <footer>
     <div class="container">
-      <div class="content">
-        <div>
+      <div class="footerContent">
+        <div class="footerContent__logo">
           <img style="width: 100px" src="@/assets/header/TF.png" />
         </div>
 
@@ -111,7 +111,7 @@ footer {
 .contact {
   color: $color-grey;
 }
-.content {
+.footerContent {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   font-family: $base-font;
@@ -167,5 +167,25 @@ li {
   color: #fff;
   margin-left: 10px;
   transition: all 0.5s;
+}
+
+// ========Mobile media ========
+@media screen and (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    &__logo {
+      margin-bottom: 16px;
+    }
+  }
+
+  h6 {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  ul li a {
+    font-size: 13px;
+  }
 }
 </style>
