@@ -1,5 +1,9 @@
 <template>
-  <header :class="scrolled ? 'scroll' : ''" class="header" style="z-index:1000">
+  <header
+    :class="scrolled ? 'scroll' : ''"
+    class="header"
+    style="z-index: 1000"
+  >
     <div class="container">
       <div class="header__wrapper">
         <router-link style="text-decoration: none" link to="/">
@@ -7,7 +11,7 @@
             <div>
               <img style="width: 40px" src="@/assets/header/TF.png" />
             </div>
-            <div style="line-height: 20px;">
+            <div style="line-height: 20px">
               <div class="header__logo--elegant">Elegant</div>
               <div class="header__logo--shoes">shoes</div>
             </div>
@@ -16,28 +20,29 @@
         <div class="header__right">
           <div class="header__right--place">
             <div>
-              <img style="margin-top:-10px" src="../../assets/header/location.png" />
+              <img
+                style="margin-top: -10px"
+                src="../../assets/header/location.png"
+              />
             </div>
             <a
-              target="_blank"
               href="https://www.google.com/maps/place/40%C2%B043'57.4%22N+72%C2%B009'42.9%22E/@40.7326151,72.1593418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7326111!4d72.1619167?entry=ttu"
-              style="text-decoration: none; color: black;"
-            >{{ $t("Manzil") }}</a>
+              style="text-decoration: none; color: black"
+              >Manzil</a
+            >
           </div>
 
           <div class="header__right--phone">
-            <div>
-              <img src="../../assets/header/contact.png" />
-            </div>
+            <div><img src="../../assets/header/contact.png" /></div>
             <a
               href="tel:998900707211"
-              style="text-decoration: none; color: black;"
-            >+998-90-070-72-11</a>
+              style="text-decoration: none; color: black"
+              >+998-90-070-72-11</a
+            >
           </div>
-          <div  class="header__right--phone">
-            <select class="Select" id="language-select" v-model="selectedLocale" @change="changeLocale">
-              <option v-for="(item, index) in supportedLocales" :key="index" :value="item.id">{{ item.name }}</option>
-            </select>
+
+          <div class="header__menu">
+            <img src="../../assets/header/menu.png" alt="">
           </div>
         </div>
       </div>
@@ -46,21 +51,11 @@
 </template>
 
 <script>
-import { BDropdown, BDropdownItem, BIcon } from "bootstrap-vue";
-
 export default {
-  comments: { BDropdown, BDropdownItem, BIcon },
   name: "AppHeader",
   data() {
     return {
       scrolled: false,
-      langvalue: "",
-      selectedLocale: 2,
-      supportedLocales: [
-        { id: 1, name: this.$t("uzCyrillic") },
-        { id: 2, name: this.$t("uzLang") },
-        { id: 3, name: this.$t("russianLanguage") }
-      ]
     };
   },
 
@@ -68,25 +63,13 @@ export default {
     handleScroll() {
       this.scrolled = window.scrollY > 0;
     },
-    changeLocale() {
-      if (this.selectedLocale == 1) {
-        this.langvalue = "uzCyrillic";
-      } else if (this.selectedLocale == 2) {
-        this.langvalue = "uzLang";
-      } else {
-        this.langvalue = "russianLanguage";
-      }
-      console.log(this.langvalue);
-      this.$i18n.locale = this.langvalue;
-    }
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
-    this.$i18n.locale = this.langvalue;
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
-  }
+  },
 };
 </script>
 <style lang="scss">
@@ -157,38 +140,32 @@ export default {
       height: 20px;
     }
   }
+
+  &__menu {
+    display: none;
+  }
 }
 .scroll {
   box-shadow: 0 0 10px rgba(168, 168, 168, 0.4);
 }
-.Select{
-  width: 48px;
-  height: auto;
-  cursor: pointer;
-  color: #4d5fff;
-  border-radius: 15px;
-  border: 1px solid #4d5fff;
-}
 
 // =========Mobile breakpoint==========
-// @media screen and (max-width: 768px) {
-//   .header {
-//     &__menu {
-//       position: relative;
-//       justify-content: end;
-
-//       &-link {
-//         display: none;
-//       }
-
-//       &-card {
-//         border: 2px solid $color-primary-light;
-
-//         &:hover {
-//           border: 2px solid $color-primary;
-//         }
-//       }
-//     }
-//   }
-// }
+@media screen and (max-width: 768px) {
+  .header {
+    &__logo {
+      &--elegant {
+        display: none;
+      }
+      &--shoes {
+        display: none;
+      }
+    }
+    &__menu {
+      display: block;
+      background-color: gainsboro;
+      padding: 16px;
+      border-radius: 20px;
+    }
+  }
+}
 </style>
