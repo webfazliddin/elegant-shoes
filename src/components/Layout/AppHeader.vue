@@ -216,7 +216,7 @@ export default {
       }
 
        a {
-        font-size: 12px;
+        font-size: 8px;
        }
       }
 
@@ -227,7 +227,7 @@ export default {
         margin-right: 2px;
       }
        a {
-        font-size: 12px;
+        font-size: 8px;
        }
       }
 
