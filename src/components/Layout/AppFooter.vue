@@ -19,28 +19,33 @@
         </div>
 
         <div>
-          <h6>{{ $t("Bog'lanish")}}</h6>
+          <h6>{{ $t("Bog'lanish") }}</h6>
           <ul>
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="telephone"></b-icon>
                 <a
                   href="tel:998900707211"
-                  style="text-decoration: none;"
+                  style="text-decoration: none"
                   class="socialLinkText"
-                >+998-90-070-72-11</a>
+                  >+998-90-070-72-11</a
+                >
               </a>
             </li>
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="house-door"></b-icon>
-                <span class="socialLinkText">{{ $t("Andijon, Shaxrixon 96-uy") }}</span>
+                <span class="socialLinkText">{{
+                  $t("Andijon, Shaxrixon 96-uy")
+                }}</span>
               </a>
             </li>
             <li>
               <a href="#">
                 <b-icon style="color: #fff" icon="briefcase"></b-icon>
-                <span class="socialLinkText">{{ $t("info@elegant_shoes.uz") }}</span>
+                <span class="socialLinkText">{{
+                  $t("info@elegant_shoes.uz")
+                }}</span>
               </a>
             </li>
             <li>
@@ -93,13 +98,10 @@ import { BIcon } from "bootstrap-vue";
 export default {
   comments: { BIcon },
   data() {
-    return {
-    };
+    return {};
   },
-  created() {
-  },
-  methods: {
-  }
+  created() {},
+  methods: {},
 };
 </script>
 
@@ -177,9 +179,8 @@ li {
     &__logo {
       margin-bottom: 16px;
     }
-  }s
-
-  h6 {
+  }
+  s h6 {
     font-size: 14px;
     margin-top: 20px;
   }

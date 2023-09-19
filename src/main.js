@@ -4,6 +4,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import router from './router'
 
 import ProductCard from "./components/Cards/ProductCard"
+import CategoryCard from "./components/Cards/CategoryCard"
 import ProductCardSkeleton from "./components/Skeletons/ProductCardSkeleton"
 
 import 'bootstrap/dist/css/bootstrap.css'
@@ -35,6 +36,7 @@ import 'es6-promise/auto'
 Vue.config.productionTip = false;
 
 Vue.component('ProductCard', ProductCard);
+Vue.component('CategoryCard', CategoryCard);
 Vue.component('ProductCardSkeleton', ProductCardSkeleton);
 
 new Vue({
