@@ -59,8 +59,16 @@
               </option>
             </select>
           </div> -->
-          <div class="header__right--mobileMenuIcon">
+          <div
+            v-if="!popUpMenu"
+            class="header__right--mobileMenuIcon"
+            @click="openMenu(true)"
+          >
             <b-icon style="color: #4e60ff" icon="list"></b-icon>
+          </div>
+
+          <div class="categoryCard">
+            <CategoryCard v-if="popUpMenu" />
           </div>
         </div>
       </div>
@@ -69,13 +77,18 @@
 </template>
 <script>
 import { BDropdown, BDropdownItem, BIcon } from "bootstrap-vue";
+import CategoryCard from "../Cards/CategoryCard.vue";
 
 export default {
   comments: { BDropdown, BDropdownItem, BIcon },
   name: "AppHeader",
+  components: {
+    CategoryCard,
+  },
   data() {
     return {
       scrolled: false,
+      popUpMenu: false,
       langvalue: "",
       selectedLocale: 2,
       supportedLocales: [
@@ -100,6 +113,9 @@ export default {
       }
       console.log(this.langvalue);
       this.$i18n.locale = this.langvalue;
+    },
+    openMenu() {
+      this.popUpMenu = true;
     },
   },
   created() {
@@ -184,8 +200,8 @@ export default {
     }
 
     &--mobileMenuIcon {
-    display: none;
-  }
+      display: none;
+    }
   }
 }
 .scroll {
@@ -198,6 +214,10 @@ export default {
   color: #4d5fff;
   border-radius: 5px;
   border: 1px solid #4d5fff;
+}
+
+.categoryCard {
+  display: none;
 }
 
 // =========Mobile breakpoint==========
@@ -254,6 +274,10 @@ export default {
         border-radius: 12px;
       }
     }
+  }
+
+  .categoryCard {
+    display: block;
   }
 }
 </style>
