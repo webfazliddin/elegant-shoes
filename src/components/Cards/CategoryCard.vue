@@ -1,34 +1,40 @@
 <template>
   <div class="category">
-    <div class="category__item">Man</div>
-    <div class="category__item">Woman</div>
-    <div class="category__item">Kids</div>
+    <a style="text-decoration: none" href="#">
+      <div class="categorCardTitle">{{ title }}</div>
+    </a>
   </div>
 </template>
 
+<script>
+export default {
+  name: "CategoryCard",
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+  },
+};
+</script>
+
 <style lang="scss">
-.category {
-    display: flex;
-    gap: 480px;
-    justify-content: center;
+.categorCardTitle {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: $base-font;
+  height: 80px;
+  border: 1px solid $color-grey-lightest;
+  border-radius: 16px;
+  background: $color-white;
+  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $color-primary;
+    background-color: $color-grey-lightest;
+    box-shadow: 0 0 10px rgba(168, 168, 168, 0.4);
   }
-.category__item {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    font-family: $base-font;
-    height: 80px;
-    width: 100px;
-    border: 1px solid $color-grey-lightest;
-    border-radius: 16px;
-    background: $color-white;
-
-    &:hover {
-      cursor: pointer;
-      border: 1px solid $color-primary;
-      background-color: $color-grey-lightest;
-    }
 }
-
-
 </style>

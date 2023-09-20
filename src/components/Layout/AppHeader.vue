@@ -19,32 +19,32 @@
         </router-link>
         <div class="header__right">
           <div class="header__right--phone">
-            <div>
+            <a
+              href="tel:998900707211"
+              style="text-decoration: none; color: black"
+            >
               <b-icon
                 href="tel:998900707211"
                 style="color: #4e60ff"
                 icon="telephone"
               ></b-icon>
-            </div>
-            <a
-              href="tel:998900707211"
-              style="text-decoration: none; color: black"
-              >+998-90-070-72-11</a
+              <span> +998-90-070-72-11</span></a
             >
           </div>
 
           <div class="header__right--place">
-            <div>
-              <b-icon
-                style="color: #4e60ff"
-                icon="geo-alt"
-              ></b-icon>
-            </div>
+            <div></div>
             <a
               target="_blank"
               href="https://www.google.com/maps/place/40%C2%B043'57.4%22N+72%C2%B009'42.9%22E/@40.7326151,72.1593418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7326111!4d72.1619167?entry=ttu"
               style="text-decoration: none; color: black"
-              >{{ $t("Manzil") }}</a
+            >
+              <b-icon
+                class="header__right--place-geoIcon"
+                style="color: #4e60ff"
+                icon="geo-alt"
+              ></b-icon>
+              <span> {{ $t("Manzil") }}</span></a
             >
           </div>
 
@@ -226,27 +226,28 @@ export default {
     &__right {
       &--place {
         margin-right: 10px;
-        & > div {
+        & > a {
           margin-right: 2px;
           background-color: #edeef2;
           padding: 12px;
           border-radius: 12px;
         }
 
-        a {
+        span {
           display: none;
         }
       }
 
       &--phone {
         margin-right: 10px;
-        & > div {
+        & > a {
           margin-right: 2px;
           background: #edeef2;
           padding: 12px;
           border-radius: 12px;
         }
-        a {
+
+        span {
           display: none;
         }
       }

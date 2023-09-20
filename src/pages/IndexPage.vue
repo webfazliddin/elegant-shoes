@@ -2,13 +2,19 @@
   <section>
     <div class="container">
       <!-- ============Carousel card=========== -->
-      <div class="carouselCard">
+      <div class="carouselCard__list">
         <CarouselCard />
       </div>
+
       <!-- ============Category card=========== -->
-      <div class="category">
-        <CategoryCard />
+      <div class="category__list">
+        <CategoryCard
+          v-for="(categoryCard, index) in categoryCardData"
+          :key="`categoryCard__${index}`"
+          :title="categoryCard.title"
+        />
       </div>
+
       <!-- ============Product card=========== -->
       <div class="products__list" v-if="isLoading">
         <ProductCardSkeleton
@@ -36,7 +42,7 @@
 </template>
 
 <script>
-import CategoryCard from "@/components/Cards/CategoryCard.vue";
+import categoryCardData from "../data/categoryCard";
 import client from "../api";
 
 export default {
@@ -45,6 +51,7 @@ export default {
     return {
       isLoading: false,
       isShowModal: false,
+      categoryCardData,
       productList: [],
     };
   },
@@ -62,13 +69,22 @@ export default {
   mounted() {
     this.loadData();
   },
-  components: { CategoryCard },
 };
 </script>
 
 <style lang="scss">
 .carouselCard {
-  margin-bottom: 20px;
+  &__list {
+    margin-bottom: 20px;
+  }
+}
+
+.category {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 }
 .products {
   &__list {
@@ -78,7 +94,6 @@ export default {
     margin: 50px 0 100px 0;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   .products {
