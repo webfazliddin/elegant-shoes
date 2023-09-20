@@ -28,7 +28,6 @@ export default {
   border: 1px solid $color-grey-lightest;
   border-radius: 16px;
   background: $color-white;
-  cursor: pointer;
 
   &:hover {
     cursor: pointer;
