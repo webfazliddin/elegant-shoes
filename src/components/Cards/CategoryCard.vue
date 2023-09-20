@@ -9,7 +9,8 @@
 <style lang="scss">
 .category {
     display: flex;
-    gap: 300px;
+    gap: 480px;
+    justify-content: center;
   }
 .category__item {
     display: grid;
