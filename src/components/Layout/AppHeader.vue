@@ -18,10 +18,13 @@
           </div>
         </router-link>
         <div class="header__right">
-
           <div class="header__right--phone">
             <div>
-              <b-icon  href="tel:998900707211" style="color: #4e60ff" icon="telephone"></b-icon>
+              <b-icon
+                href="tel:998900707211"
+                style="color: #4e60ff"
+                icon="telephone"
+              ></b-icon>
             </div>
             <a
               href="tel:998900707211"
@@ -30,11 +33,12 @@
             >
           </div>
 
-          
           <div class="header__right--place">
             <div>
-              <b-icon   target="_blank"
-              href="https://www.google.com/maps/place/40%C2%B043'57.4%22N+72%C2%B009'42.9%22E/@40.7326151,72.1593418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7326111!4d72.1619167?entry=ttu" style="color: #4e60ff" icon="geo-alt"></b-icon>
+              <b-icon
+                style="color: #4e60ff"
+                icon="geo-alt"
+              ></b-icon>
             </div>
             <a
               target="_blank"
@@ -44,7 +48,6 @@
             >
           </div>
 
-         
           <div class="header__right--lang">
             <b-icon style="color: #4e60ff" icon="globe"></b-icon>
           </div>
@@ -64,8 +67,6 @@
               </option>
             </select>
           </div> -->
-
-
         </div>
       </div>
     </div>
