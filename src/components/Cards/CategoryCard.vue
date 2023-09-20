@@ -11,6 +11,7 @@
     display: flex;
     gap: 480px;
     justify-content: center;
+    flex-wrap: wrap;
   }
 .category__item {
     display: grid;
