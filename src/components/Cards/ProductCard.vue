@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card__image">
-      <img src="../../assets/product/shoesel.webp" />
+      <img src="../../assets/product/img2.jpg" />
     </div>
     <div class="card__body">
       <div>
@@ -75,7 +75,7 @@ export default {
 
   &__image img {
     width: 100%;
-    height: 160px;
+    height: 260px;
     border-radius: 5px 5px 0 0;
     background-size: cover;
     cursor: pointer;
