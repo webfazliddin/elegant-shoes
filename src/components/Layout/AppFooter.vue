@@ -28,28 +28,34 @@
                   href="tel:998900707211"
                   style="text-decoration: none"
                   class="socialLinkText"
-                  >+998-90-070-72-11</a
-                >
+                >+998-90-070-72-11</a>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a
+                target="_blank"
+                href="https://www.google.com/maps/place/40%C2%B043'57.4%22N+72%C2%B009'42.9%22E/@40.7326151,72.1593418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.7326111!4d72.1619167?entry=ttu"
+              >
                 <b-icon style="color: #fff" icon="house-door"></b-icon>
-                <span class="socialLinkText">{{
+                <span class="socialLinkText">
+                  {{
                   $t("Andijon, Shaxrixon 96-uy")
-                }}</span>
+                  }}
+                </span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a target="_blank" href="https://t.me/abdurashid_011">
                 <b-icon style="color: #fff" icon="briefcase"></b-icon>
-                <span class="socialLinkText">{{
+                <span class="socialLinkText">
+                  {{
                   $t("info@elegant_shoes.uz")
-                }}</span>
+                  }}
+                </span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a target="_blank" href="https://t.me/abdurashid_011">
                 <b-icon style="color: #fff" icon="telegram"></b-icon>
                 <span class="socialLinkText">{{ $t("Telegram_Bot") }}</span>
               </a>
@@ -61,27 +67,26 @@
           <h6>{{ $t("Bizning ishtimoiy tarmoqlar") }}</h6>
           <ul>
             <li>
-              <a href="#">
+              <a target="_blank" href="https://www.instagram.com/tf_elegant_shoes/">
+                <b-icon style="color: #fff" icon="instagram"></b-icon>
+                <span class="socialLinkText">{{ $t("Instagram") }}</span>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://t.me/treadshoes">
                 <b-icon style="color: #fff" icon="telegram"></b-icon>
                 <span class="socialLinkText">{{ $t("Telegram") }}</span>
               </a>
             </li>
             <li>
-              <a href="#">
-                <b-icon style="color: #fff" icon="instagram"></b-icon>
-                <span class="socialLinkText">{{ $t("Instagram") }}</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
+              <a target="_blank" href="https://www.youtube.com/watch?v=cv9_p0GXDrE">
                 <b-icon style="color: #fff" icon="facebook"></b-icon>
                 <span class="socialLinkText">{{ $t("Facebook") }}</span>
               </a>
             </li>
 
             <li>
-              <a href="#">
+              <a target="_blank" href="https://www.youtube.com/watch?v=cv9_p0GXDrE">
                 <b-icon style="color: #fff" icon="youtube"></b-icon>
                 <span class="socialLinkText">{{ $t("YouTube") }}</span>
               </a>
@@ -101,7 +106,7 @@ export default {
     return {};
   },
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>
 
