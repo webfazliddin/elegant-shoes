@@ -6,7 +6,7 @@
           <img style="width: 100px" src="@/assets/header/TF.png" />
         </div>
 
-        <div>
+        <div class="footer__top">
           <h6>{{ $t("Biz haqimizda") }}</h6>
           <ul>
             <li>
@@ -18,7 +18,7 @@
           </ul>
         </div>
 
-        <div>
+        <div class="footer__top">
           <h6>{{ $t("Bog'lanish") }}</h6>
           <ul>
             <li>
@@ -63,7 +63,7 @@
           </ul>
         </div>
 
-        <div>
+        <div class="footer__top">
           <h6>{{ $t("Bizning ishtimoiy tarmoqlar") }}</h6>
           <ul>
             <li>
@@ -193,5 +193,8 @@ li {
   ul li a {
     font-size: 13px;
   }
+   .footerContent .footer__top{
+     margin-top: 10px;
+   }
 }
 </style>
