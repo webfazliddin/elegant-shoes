@@ -16,7 +16,7 @@
         <p class="card__p2">250 {{ $t("ming") }}</p>
       </div>
     </div>
-    <b-modal size="xl" v-model="ProductModal" hide-footer>
+    <b-modal size="xl" class="Modal" v-model="ProductModal" hide-footer>
       <div class="ViewProducts">
         <div class="ProductList">
           <div>
@@ -139,8 +139,24 @@ export default {
   gap: 180px;
 }
 .mainProduct img{
-  width: 440px !important;
+  width: 440px;
   height: auto;
    padding: 10px 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .ViewProducts {
+  display: flex;
+  gap: 40px;
+}
+  .ProductList img {
+    width: 60px;
+    height: auto;
+  }
+
+  .mainProduct img{
+    width: 200px;
+    height: auto;
+  }
 }
 </style>

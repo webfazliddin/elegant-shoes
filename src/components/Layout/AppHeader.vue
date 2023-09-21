@@ -229,8 +229,8 @@ export default {
         & > a {
           margin-right: 2px;
           background-color: #edeef2;
-          padding: 12px;
-          border-radius: 12px;
+          padding: 8px;
+          border-radius: 10px;
         }
 
         span {
@@ -243,8 +243,8 @@ export default {
         & > a {
           margin-right: 2px;
           background: #edeef2;
-          padding: 12px;
-          border-radius: 12px;
+          padding: 8px;
+          border-radius: 8px;
         }
 
         span {
@@ -254,16 +254,16 @@ export default {
 
       &--lang {
         background: #edeef2;
-        padding: 12px;
-        border-radius: 12px;
+        padding: 8px;
+        border-radius: 8px;
         margin-right: 10px;
       }
 
       &--mobileMenuIcon {
         display: block;
         background: #edeef2;
-        padding: 12px;
-        border-radius: 12px;
+        padding: 8px;
+        border-radius: 8px;
       }
     }
   }

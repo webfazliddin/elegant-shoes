@@ -24,7 +24,7 @@ export default {
   justify-content: center;
   align-items: center;
   font-family: $base-font;
-  height: 80px;
+  height: 60px;
   border: 1px solid $color-grey-lightest;
   border-radius: 16px;
   background: $color-white;
