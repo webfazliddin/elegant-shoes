@@ -1,7 +1,7 @@
 <template>
   <div class="category">
     <a style="text-decoration: none" href="#">
-      <div class="categorCardTitle">{{ title }}</div>
+      <div class="categorCardTitle">{{$t(title)}}</div>
     </a>
   </div>
 </template>

@@ -51,7 +51,7 @@
           <div class="header__right--lang">
             <b-icon style="color: #4e60ff" icon="globe"></b-icon>
           </div>
-          <!-- <div class="header__right--lang">
+          <div class="header__right--lang">
             <select
               class="Select"
               id="language-select"
@@ -66,7 +66,7 @@
                 {{ item.name }}
               </option>
             </select>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
