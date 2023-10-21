@@ -9,7 +9,7 @@
         <router-link style="text-decoration: none" link to="/">
           <div class="header__logo">
             <div>
-              <img style="width: 40px" src="@/assets/header/TF.png" />
+              <img @click="mainPage" style="width: 40px" src="@/assets/header/TF.png" />
             </div>
             <div style="line-height: 20px">
               <div class="header__logo--elegant">Elegant</div>
@@ -107,6 +107,11 @@ export default {
   },
 
   methods: {
+      mainPage() {
+      this.$router.push({name: "MainLayout"})
+       .then(() => {window.location.reload();
+      });
+    },
     handleScroll() {
       this.scrolled = window.scrollY > 0;
     },

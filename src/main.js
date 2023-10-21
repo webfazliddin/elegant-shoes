@@ -13,6 +13,9 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 
 import VueI18n from "vue-i18n";
 
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+
 Vue.use(VueI18n);
 import russianLanguage from "./lang/langMessages/ru.json";
 import uzCyrillic from "./lang/langMessages/uz_cyrl.json";

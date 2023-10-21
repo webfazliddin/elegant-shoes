@@ -3,17 +3,17 @@
     <div class="container">
       <div class="footerContent">
         <div class="footerContent__logo">
-          <img style="width: 100px" src="@/assets/header/TF.png" />
+          <img @click="mainPage" style="width: 100px" src="@/assets/header/TF.png" />
         </div>
 
         <div class="footer__top">
           <h6>{{ $t("Biz haqimizda") }}</h6>
           <ul>
             <li>
-              <a class="AboutUs" href="#">{{ $t("Batafsil") }}</a>
+              <a class="AboutUs" href="#" @click="AboutPage">{{ $t("Batafsil") }}</a>
             </li>
             <li>
-              <a class="AboutUs" href="#">{{ $t("Yangiliklar") }}</a>
+              <a class="AboutUs" href="#" @click="newsPage">{{ $t("Yangiliklar") }}</a>
             </li>
           </ul>
         </div>
@@ -100,13 +100,32 @@
 
 <script>
 import { BIcon } from "bootstrap-vue";
+import VueRouter from 'vue-router';
 export default {
-  comments: { BIcon },
+  comments: { BIcon, VueRouter },
   data() {
     return {};
   },
-  created() {},
-  methods: {}
+  created() {
+    // this.Refresh();
+  },
+   methods: {
+    AboutPage() {
+      this.$router.push({name: "AboutPage"})
+          .then(() => {window.location.reload();
+      });
+    },
+    newsPage() {
+      this.$router.push({name: "newsPage"})
+          .then(() => {window.location.reload();
+      });
+    },
+     mainPage() {
+      this.$router.push({name: "MainLayout"})
+       .then(() => {window.location.reload();
+      });
+    },
+  }
 };
 </script>
 
