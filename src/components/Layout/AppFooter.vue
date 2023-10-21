@@ -10,6 +10,9 @@
           <h6>{{ $t("Biz haqimizda") }}</h6>
           <ul>
             <li>
+              <a class="AboutUs" href="#" @click="mainPage">{{ $t("Asosiy") }}</a>
+            </li>
+            <li>
               <a class="AboutUs" href="#" @click="AboutPage">{{ $t("Batafsil") }}</a>
             </li>
             <li>
