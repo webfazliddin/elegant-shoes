@@ -1,14 +1,15 @@
 <template>
-  <div class="card">
+   <div class="card">
     <div class="card__image">
       <img src="../../assets/product/img2.jpg" />
     </div>
     <div class="card__body">
       <div>
         <div class="card__title">Loro Piano</div>
-        <div>
-          <!-- <img src="../../assets/product/eye.png" alt /> -->
+        <div style="display:flex; gap:10px">
           <b-icon @click="openModal" style="color:#4d5fff;" icon="eye"></b-icon>
+          <b-icon style="color:#4d5fff;" icon="pencil"></b-icon>
+          <b-icon style="color:#4d5fff;" icon="trash"></b-icon>
         </div>
       </div>
       <div class="card__text">
@@ -30,7 +31,7 @@
           </div>
         </div>
         <div class="mainProduct">
-          <img src="../../assets/product/images.jpg" />
+            <img src="../../assets/product/img2.jpg" />
         </div>
       </div>
     </b-modal>
@@ -143,6 +144,7 @@ export default {
   height: auto;
    padding: 10px 0 0 0;
 }
+
 
 @media screen and (max-width: 768px) {
   .ViewProducts {

@@ -48,9 +48,21 @@
             >
           </div>
 
-          <div class="header__right--lang">
+          <!-- <div class="header__right--lang">
             <b-icon style="color: #4e60ff" icon="globe"></b-icon>
-          </div>
+          </div> -->
+
+            <!-- <b-nav-item-dropdown right>
+              <b-dropdown-item v-for="(item, index) in supportedLocales"
+                :key="index"
+                :value="item.id"
+                @change="changeLocale"
+                v-model="selectedLocale"
+              >
+                {{ item.name }}  
+              </b-dropdown-item>
+            </b-nav-item-dropdown> -->
+
           <div class="header__right--lang">
             <select
               class="Select"
@@ -67,16 +79,17 @@
               </option>
             </select>
           </div>
+
         </div>
       </div>
     </div>
   </header>
 </template>
 <script>
-import { BDropdown, BDropdownItem, BIcon } from "bootstrap-vue";
+import { BNavbar, BNavbarNav, BNavItem, BNavItemDropdown, BDropdown, BDropdownItem, BIcon } from "bootstrap-vue";
 
 export default {
-  comments: { BDropdown, BDropdownItem, BIcon },
+  comments: { BNavbar, BNavbarNav, BNavItem, BNavItemDropdown, BDropdown, BDropdownItem, BIcon },
   name: "AppHeader",
 
   data() {
@@ -105,7 +118,6 @@ export default {
       } else {
         this.langvalue = "russianLanguage";
       }
-      console.log(this.langvalue);
       this.$i18n.locale = this.langvalue;
     },
   },
@@ -198,13 +210,22 @@ export default {
 .scroll {
   box-shadow: 0 0 10px rgba(168, 168, 168, 0.4);
 }
+// .Select {
+//   width: 48px;
+//   height: auto;
+//   cursor: pointer;
+//   color: #4d5fff;
+//   border-radius: 5px;
+//   border: 1px solid #4d5fff;
+// }
+
 .Select {
   width: 48px;
   height: auto;
-  cursor: pointer;
-  color: #4d5fff;
-  border-radius: 5px;
-  border: 1px solid #4d5fff;
+  border: 1px solid #fff;
+}
+.Select:hover, .Select:focus, .Select:active, .Select:enabled {
+  border: 1px solid #fff;
 }
 
 .categoryCard {
