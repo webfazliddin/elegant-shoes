@@ -12,8 +12,8 @@
               <img @click="mainPage" style="width: 40px" src="@/assets/header/TF.png" />
             </div>
             <div style="line-height: 20px">
-              <div class="header__logo--elegant">Elegant</div>
-              <div class="header__logo--shoes">shoes</div>
+              <div class="header__logo--elegant" @click="mainPage">Elegant</div>
+              <div class="header__logo--shoes" @click="mainPage">shoes</div>
             </div>
           </div>
         </router-link>

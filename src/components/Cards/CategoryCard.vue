@@ -1,7 +1,7 @@
 <template>
   <div class="category">
     <div class="categorCardTitle" @click="manPage">{{ $t("Man") }}</div>
-    <div class="categorCardTitle" @click="womanPage">{{ $t("Women") }}</div>
+    <div class="categorCardTitle" @click="womanPage">{{ $t("Woman") }}</div>
     <div class="categorCardTitle" @click="kidsPage">{{ $t("Kids") }}</div>
   </div>
 </template>

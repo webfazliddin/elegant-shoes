@@ -17,7 +17,7 @@
         <p class="card__p2">250 {{ $t("ming") }}</p>
       </div>
     </div>
-    <b-modal size="xl" class="Modal" v-model="ProductModal" hide-footer>
+    <b-modal size="lg" v-model="ProductModal" hide-footer>
       <div class="ViewProducts">
         <div class="ProductList">
           <div>
