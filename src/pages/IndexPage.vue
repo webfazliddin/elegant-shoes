@@ -5,15 +5,18 @@
       <div class="carouselCard__list">
         <CarouselCard />
       </div>
+      <div class="1">
+        <CategoryCard />
+      </div>
 
       <!-- ============Category card=========== -->
-      <div class="category__list">
+      <!-- <div class="category__list">
         <CategoryCard
           v-for="(categoryCard, index) in categoryCardData"
           :key="`categoryCard__${index}`"
           :title="categoryCard.title"
         />
-      </div>
+      </div> -->
 
       <!-- ============Product card=========== -->
       <div class="products__list" v-if="isLoading">
@@ -42,7 +45,7 @@
 </template>
 
 <script>
-import categoryCardData from "../data/categoryCard";
+// import categoryCardData from "../data/categoryCard";
 import client from "../api";
 
 export default {
@@ -51,7 +54,7 @@ export default {
     return {
       isLoading: false,
       isShowModal: false,
-      categoryCardData,
+      // categoryCardData,
       productList: [],
     };
   },

@@ -1,24 +1,48 @@
 <template>
   <div class="category">
-    <a style="text-decoration: none" href="#">
-      <div class="categorCardTitle">{{$t(title)}}</div>
-    </a>
+    <div class="categorCardTitle" @click="manPage">{{ $t("Man") }}</div>
+    <div class="categorCardTitle" @click="womanPage">{{ $t("Women") }}</div>
+    <div class="categorCardTitle" @click="kidsPage">{{ $t("Kids") }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "CategoryCard",
+  name: "MainLayout",
   props: {
     title: {
       type: String,
       default: "",
     },
   },
+  methods: {
+    manPage() {
+      this.$router.push({ name: "manPage" }).then(() => {
+        window.location.reload();
+      });
+    },
+    womanPage() {
+      this.$router.push({ name: "womanPage" }).then(() => {
+        window.location.reload();
+      });
+    },
+    kidsPage() {
+      this.$router.push({ name: "kidsPage" }).then(() => {
+        window.location.reload();
+      });
+    },
+  },
 };
 </script>
 
 <style lang="scss">
+.category {
+  display: flex;
+  gap: 40px;
+}
+.category div {
+  width: 100%;
+}
 .categorCardTitle {
   display: grid;
   justify-content: center;

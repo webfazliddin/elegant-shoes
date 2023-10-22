@@ -18,7 +18,7 @@
           @sliding-start="onSlideStart"
           @sliding-end="onSlideEnd"
         >
-          <b-carousel-slide style="border-radius: 15px">
+          <b-carousel-slide style="border-radius: 15px">x
             <template #img>
               <div
                 style="background-color: #45bbd7; border-radius: 15px"
