@@ -71,7 +71,7 @@ export default {
 <style>
 .mainImg {
   margin-top: 20px;
-  border-radius: 15px;
+  /* border-radius: 50px; */
 }
 .PersonCard {
   display: flex;
@@ -82,7 +82,7 @@ export default {
  height: 200px;
 }
 .fullname{
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
